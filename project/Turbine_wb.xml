@@ -1,0 +1,98 @@
+<project name="Turbine_wb" threads="1" pubsub="auto" heartbeat-interval="1">
+  <metadata>
+    <meta id="studioUploadedBy">sasdemo</meta>
+    <meta id="studioUploaded">1572383855067</meta>
+    <meta id="studioModifiedBy">sasdemo</meta>
+    <meta id="studioModified">1572403609688</meta>
+    <meta id="layout">{"cq1":{"d_turbine":{"x":205,"y":55},"sst_turbine":{"x":205,"y":180}}}</meta>
+  </metadata>
+  <contqueries>
+    <contquery name="cq1">
+      <windows>
+        <window-source pubsub="true" index="pi_EMPTY" name="d_turbine">
+          <schema>
+            <fields>
+              <field name="id" type="int64" key="true"/>
+              <field name="Turbine1" type="double"/>
+              <field name="Turbine2" type="double"/>
+              <field name="Turbine3" type="double"/>
+              <field name="Turbine4" type="double"/>
+            </fields>
+          </schema>
+          <connectors>
+            <connector class="fs" name="src">
+              <properties>
+                <property name="type"><![CDATA[pub]]></property>
+                <property name="header"><![CDATA[1]]></property>
+                <property name="noautogenfield"><![CDATA[true]]></property>
+                <property name="addcsvopcode"><![CDATA[true]]></property>
+                <property name="addcsvflags"><![CDATA[normal]]></property>
+                <property name="fsname"><![CDATA[/home/sasdemo/aiot/turbine/data/turbine.csv]]></property>
+                <property name="fstype"><![CDATA[csv]]></property>
+              </properties>
+            </connector>
+          </connectors>
+        </window-source>
+        <window-calculate pubsub="true" algorithm="SST" name="sst_turbine">
+          <schema>
+            <fields>
+              <field name="id" type="int64" key="true"/>
+              <field name="Turbine1" type="double"/>
+              <field name="Turbine2" type="double"/>
+              <field name="Turbine3" type="double"/>
+              <field name="Turbine4" type="double"/>
+              <field name="PCAngleChangeOut" type="double"/>
+              <field name="PCAbsoluteAngleOut" type="double"/>
+              <field name="projAngleOut" type="double"/>
+              <field name="residualRate" type="double"/>
+              <field name="numRank" type="int32"/>
+              <field name="pc_t1" type="double"/>
+              <field name="pc_t2" type="double"/>
+              <field name="pc_t3" type="double"/>
+              <field name="pc_t4" type="double"/>
+            </fields>
+          </schema>
+          <parameters>
+            <properties>
+              <property name="windowLength"><![CDATA[200]]></property>
+              <property name="overlap"><![CDATA[-1]]></property>
+              <property name="maxPrincipal"><![CDATA[4]]></property>
+              <property name="covForgetFactor"><![CDATA[0.5]]></property>
+              <property name="meanForgetFactor"><![CDATA[0.5]]></property>
+              <property name="eigvalTolCumulative"><![CDATA[0.99]]></property>
+            </properties>
+          </parameters>
+          <input-map>
+            <properties>
+              <property name="inputs"><![CDATA[Turbine1, Turbine2, Turbine3, Turbine4]]></property>
+            </properties>
+          </input-map>
+          <output-map>
+            <properties>
+              <property name="PCAngleChangeOut"><![CDATA[PCAngleChangeOut]]></property>
+              <property name="PCAbsoluteAngleOut"><![CDATA[PCAbsoluteAngleOut]]></property>
+              <property name="projAngleOut"><![CDATA[projAngleOut]]></property>
+              <property name="residualOut"><![CDATA[residualRate]]></property>
+              <property name="numRankOut"><![CDATA[numRank]]></property>
+              <property name="principalVecOut"><![CDATA[pc_t1, pc_t2, pc_t3, pc_t4]]></property>
+            </properties>
+          </output-map>
+          <connectors>
+            <connector class="fs" name="sub">
+              <properties>
+                <property name="type"><![CDATA[sub]]></property>
+                <property name="header"><![CDATA[full]]></property>
+                <property name="snapshot"><![CDATA[true]]></property>
+                <property name="fsname"><![CDATA[/home/sasdemo/aiot/turbine/output/turbine_esp_out.csv]]></property>
+                <property name="fstype"><![CDATA[csv]]></property>
+              </properties>
+            </connector>
+          </connectors>
+        </window-calculate>
+      </windows>
+      <edges>
+        <edge source="d_turbine" target="sst_turbine" role="data"/>
+      </edges>
+    </contquery>
+  </contqueries>
+</project>

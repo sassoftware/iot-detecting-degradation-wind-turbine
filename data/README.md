@@ -1,0 +1,1 @@
+This folder contains the data set (turbine.csv) which consists of hourly energy (in kilowatts) produced by each of the four turbines.
