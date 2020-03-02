@@ -9,7 +9,7 @@ Learn how to monitor degradation of wind turbines in real-time. In this example,
 Key take-aways from the use case: 
 * Learn how to design streaming model for real-time failure detection
 * Learn how to use [Subspace tracking](https://go.documentation.sas.com/?cdcId=espcdc&cdcVersion=6.2&docsetId=espan&docsetTarget=n034ho5r1hbu2rn18m68ywshnuq5.htm&locale=en#p0dv9t241gp1ptn13vo75aol2d1b) algorithm to detect anomalies
-* Best practices for [Subspace tracking]https://github.com/sassoftware/iot-anomaly-detection-floodlights/blob/master/docs/SubspaceTracking.md) algorithm
+* Best practices for [Subspace tracking](https://github.com/sassoftware/iot-anomaly-detection-floodlights/blob/master/docs/SubspaceTracking.md) algorithm
 
 We will use the [SST](https://go.documentation.sas.com/?cdcId=espcdc&cdcVersion=6.2&docsetId=espan&docsetTarget=n034ho5r1hbu2rn18m68ywshnuq5.htm&locale=en#p0dv9t241gp1ptn13vo75aol2d1b) algorithm packaged in **SAS Event Stream Processing Studio** to detect degradation in real time using streaming data. It is a method to detect anomalies and system degradation in systems that generate high-frequency, high-dimensional data. It can be used for data containing a single measure for sensors from various devices operating under similar conditions (e.g., energy output from multiple panels in a Solar farm), or multiple measures for sensors from a single device operating under similar conditions (e.g., turbofan in an aircraft).
 
