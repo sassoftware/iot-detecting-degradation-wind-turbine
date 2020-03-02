@@ -18,14 +18,14 @@ The host is the system where SAS Event Stream Processing Studio is installed.
 1.  Go to **Projects** page
     *  Click on **More actions**
     *  Select **Upload Projects** 
-    *  Navigate to the location that contains the downloaded copy of [turbine_wb.xml](project/turbine_wb.xml) by clicking on **Upload Project files**
+    *  Navigate to the location that contains the downloaded copy of [turbine_wb.xml](../project/turbine_wb.xml) by clicking on **Upload Project files**
     *  Close and return to Project page
     *  New project named turbine_wb is created, double click to open
     *  Review properties of source and calculate windows
     *  Make following changes
         *  Change path to Input Data Connector to reflect accessible location
         
-        ![](images/pic5.png) 
+        ![](../images/pic5.png) 
         *  Similarly update path of Subscriber connector to reflect accessible location
     * Save the Project
     * Follow **Sections 3-5** as described below.
@@ -45,7 +45,7 @@ The host is the system where SAS Event Stream Processing Studio is installed.
    *  Add new connector
    *  Add details to receive data from csv file 
       *  Copy paste or type the path to the turbine.csv file under Fsname and select Fstype as csv
-      ![](images/pic5.png) 
+      ![](../images/pic5.png) 
       *  Click ‘All Properties’ and add details from the table below and click ‘OK’
       
             | Property | Value |
@@ -60,7 +60,7 @@ The host is the system where SAS Event Stream Processing Studio is installed.
    *  Click on Output schema on the right pane and edit rows   
    *  Click on Import Schema and select XML snippet.
    
-      <img src="images/pic_b.png" width="400" > 
+      <img src="../images/pic_b.png" width="400" > 
 
    *  Copy the xml below and paste it in the window. 
       ``` 
@@ -74,7 +74,7 @@ The host is the system where SAS Event Stream Processing Studio is installed.
       ```
    *  Add Calculate window from Analytics to workspace
    *  Connect the calculate window with source data
-        ![](images/esp_project.png) 
+        ![](../images/esp_project.png) 
    *  Select Name and Description 
    *  Expand Settings
       *  Select ‘Online algorithm’ under Calculation
@@ -88,9 +88,9 @@ The host is the system where SAS Event Stream Processing Studio is installed.
             | overlap | -1 |
         *  Select Turbine1 through Turbine4 from dropdown as inputs under Input Map ( *Tip* : **SHIFT** and select Turbine1-Turbine4 to select)
         *  Type in output names for roles under Output Map. These columns will be added to the schema. 
-        ![](images/pic6.png) 
+        ![](../images/pic6.png) 
         *  For principalVecOut type : pc_t1, pc_t2, pc_t3, pc_t4 for Name. Click on Add new Item when prompted. 
-         <img src="images/pic7.png" width=600>
+         <img src="../images/pic7.png" width=600>
    *  Go to **Output Schema**, click on 'Edit rows'
         *  Click on Import Schema and copy fields from Input Schema
         *  Add new fields pc_t1-pc_t4 with type as 'double' 
@@ -113,7 +113,7 @@ The host is the system where SAS Event Stream Processing Studio is installed.
               <field name="pc_t4" type="double"/>
             </fields>
              ```
-        ![](images/pic8.png)
+        ![](../images/pic8.png)
    *  Save the Project 
    *  Follow **Sections 3-5** as described below.
     
@@ -132,7 +132,7 @@ The host is the system where SAS Event Stream Processing Studio is installed.
    *  Click on **Enter Test Mode**
    *  Click on **Run Test**
    *  The image below shows the streaming data coming in and results from SST. 
-     ![](images/pic9.png)
+     ![](../images/pic9.png)
 
 ## 5. Visualize Event Streams with Streamviwer
    * Access **SAS Event Stream Processing Streamviewer** by opening following URL: https://*Streamviewer-host-name*/SASEventStreamProcessingStreamviewer
@@ -142,13 +142,13 @@ The host is the system where SAS Event Stream Processing Studio is installed.
    * Highlight the SST-calculate window, it displays information regarding the window, fields, schema, etc. 
    * Add updating subscriber or streaming subscriber. 
    * A table is added to the dashboard. 
-   * Click on ![](images/a6.png)  and select New Chart
+   * Click on ![](../images/a6.png)  and select New Chart
    * Select Scatter plot and set values for X as Event and Y as Turbine1, click OK
    * A chart is added to the dashboard
    * Repeat the steps to add charts for Turbine2-Turbine4 or other parameters from SST model
-    ![](images/pic10.png)
+    ![](../images/pic10.png)
 
-Check [sample project template](project/turbine_wb.xml) to compare project properties.
+Check [sample project template](../project/turbine_wb.xml) to compare project properties.
 For more details see the [link.](https://go.documentation.sas.com/?cdcId=espcdc&cdcVersion=6.1&docsetId=espvisualize&docsetTarget=titlepage.htm&locale=en)
 
 
