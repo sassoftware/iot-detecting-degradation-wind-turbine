@@ -18,7 +18,7 @@ The host is the system where SAS Event Stream Processing Studio is installed.
 1.  Go to **Projects** page
     *  Click on **More actions**
     *  Select **Upload Projects** 
-    *  Navigate to the location that contains the downloaded copy of [turbine_wb.xml](../project/turbine_wb.xml) by clicking on **Upload Project files**
+    *  Navigate to the location that contains the downloaded copy of [turbine_wb.xml](../project/Turbine_wb.xml) by clicking on **Upload Project files**
     *  Close and return to Project page
     *  New project named turbine_wb is created, double click to open
     *  Review properties of source and calculate windows
@@ -148,7 +148,7 @@ The host is the system where SAS Event Stream Processing Studio is installed.
    * Repeat the steps to add charts for Turbine2-Turbine4 or other parameters from SST model
     ![](../images/pic10.png)
 
-Check [sample project template](../project/turbine_wb.xml) to compare project properties.
+Check [sample project template](../project/Turbine_wb.xml) to compare project properties.
 For more details see the [link.](https://go.documentation.sas.com/?cdcId=espcdc&cdcVersion=6.1&docsetId=espvisualize&docsetTarget=titlepage.htm&locale=en)
 
 
