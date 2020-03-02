@@ -8,10 +8,10 @@ Learn how to monitor degradation of wind turbines in real-time. In this example,
 
 Key take-aways from the use case: 
 * Learn how to design streaming model for real-time failure detection
-* Learn how to use [Subspace tracking](https://gitlab.sas.com/IOT/accelerators/high-frequency-algorithms-for-iot-applications/blob/master/docs/sst.md) algorithm to detect anomalies
-* Best practices for [Subspace tracking](https://gitlab.sas.com/IOT/accelerators/high-frequency-algorithms-for-iot-applications/blob/master/docs/sst.md) algorithm
+* Learn how to use [Subspace tracking](https://go.documentation.sas.com/?cdcId=espcdc&cdcVersion=6.2&docsetId=espan&docsetTarget=n034ho5r1hbu2rn18m68ywshnuq5.htm&locale=en#p0dv9t241gp1ptn13vo75aol2d1b) algorithm to detect anomalies
+* Best practices for [Subspace tracking]https://github.com/sassoftware/iot-anomaly-detection-floodlights/blob/master/docs/SubspaceTracking.md) algorithm
 
-We will use the [Subspace tracking (SST)](https://gitlab.sas.com/IOT/accelerators/high-frequency-algorithms-for-iot-applications/blob/master/docs/sst.md) algorithm packaged in **SAS Event Stream Processing Studio** to detect degradation in real time using streaming data. It is a method to detect anomalies and system degradation in systems that generate high-frequency, high-dimensional data. It can be used for data containing a single measure for sensors from various devices operating under similar conditions (e.g., energy output from multiple panels in a Solar farm), or multiple measures for sensors from a single device operating under similar conditions (e.g., turbofan in an aircraft).
+We will use the [SST](https://go.documentation.sas.com/?cdcId=espcdc&cdcVersion=6.2&docsetId=espan&docsetTarget=n034ho5r1hbu2rn18m68ywshnuq5.htm&locale=en#p0dv9t241gp1ptn13vo75aol2d1b) algorithm packaged in **SAS Event Stream Processing Studio** to detect degradation in real time using streaming data. It is a method to detect anomalies and system degradation in systems that generate high-frequency, high-dimensional data. It can be used for data containing a single measure for sensors from various devices operating under similar conditions (e.g., energy output from multiple panels in a Solar farm), or multiple measures for sensors from a single device operating under similar conditions (e.g., turbofan in an aircraft).
 
 ### Prerequisites
 
@@ -35,7 +35,7 @@ We begin with analyzing the data in SAS Visual Analytics. The plot in figure 1 s
 <img src="images/data1.png" >
 
 ### Build and Test Streaming Model
-Just exploration of the energy produced by each turbine is not enough to detect anomalous behavior.  In order to get timely alerts on the operations of turbines we can use [Subspace tracking (SST)](https://gitlab.sas.com/IOT/accelerators/high-frequency-algorithms-for-iot-applications/blob/master/docs/sst.md) algorithm packaged in **SAS Event Stream Processing Studio**.
+Just exploration of the energy produced by each turbine is not enough to detect anomalous behavior.  In order to get timely alerts on the operations of turbines we can use [SST](https://go.documentation.sas.com/?cdcId=espcdc&cdcVersion=6.2&docsetId=espan&docsetTarget=n034ho5r1hbu2rn18m68ywshnuq5.htm&locale=en#p0dv9t241gp1ptn13vo75aol2d1b) algorithm packaged in **SAS Event Stream Processing Studio**.
 
 It is frequently used in the IoT world where data is gathered from many sensors that are connected to each other and have high correlation. 
 This approach converts a set of correlated variables to a set of linearly uncorrelated variables known as principal components. Because the first few principal components usually capture most of the variability in the data, they can be tracked over time to assess whether any changes have taken place in the subspace that is spanned by the data.
@@ -70,7 +70,7 @@ The angle change and absolute angle plots clearly shows the subspace change or g
 With this knowledge, decisions can be put into place to trigger maintenance activities when the absolute angle or angle change value is above an acceptable level. 
 
 ### Summary
-We can build in-stream models using the [Subspace tracking (SST)](https://gitlab.sas.com/IOT/accelerators/high-frequency-algorithms-for-iot-applications/blob/master/docs/sst.md) algorithm packaged in **SAS Event Stream Processing Analytics**. 
+We can build in-stream models using the [Subspace tracking (SST)](https://go.documentation.sas.com/?cdcId=espcdc&cdcVersion=6.2&docsetId=espan&docsetTarget=n034ho5r1hbu2rn18m68ywshnuq5.htm&locale=en#p0dv9t241gp1ptn13vo75aol2d1b) algorithm packaged in **SAS Event Stream Processing Analytics**. 
 It can monitor the system in real-time and the faulty turbines can be immediately identified.
 This method can be used in other systems that generate high-frequency, high-dimensional data to detect anomalies and degradation in real-time. 
 
@@ -82,7 +82,7 @@ See detailed [step by step instructions](docs) to build the process and learn mo
 | # | Description |
 | :------: | :------ |
 | 1 | [Build and Test Streaming Models](docs/BuildModel.md) |
-| 2 | [Best Practices for SST](https://gitlab.sas.com/IOT/accelerators/high-frequency-algorithms-for-iot-applications/blob/master/docs/sst.md) | 
+| 2 | [Best Practices for SST](https://github.com/sassoftware/iot-anomaly-detection-floodlights/blob/master/docs/SubspaceTracking.md) | 
 
 ## Contributing
 This repo is not open for external contributions.
