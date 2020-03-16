@@ -93,6 +93,10 @@ This project is licensed under the [Apache 2.0 License](LICENSE.md).
 
 ## Additional Resources
 
-* SAS Event Stream Processing 6.1 : [Documentation](https://go.documentation.sas.com/?cdcId=espcdc&cdcVersion=6.1&docsetId=espan&docsetTarget=p0dv9t241gp1ptn13vo75aol2d1b.htm&locale=en)
-* SAS Visual Data Mining and Machine Learning 8.4: [Documentation](https://go.documentation.sas.com/?cdcId=pgmsascdc&cdcVersion=9.4_3.4&docsetId=allprodsproc&docsetTarget=p1o1v16by0iotvn10m0jzzv9i3y8.htm&locale=en#p1wq8tbwge4vrxn1r169ruvtze1a)
-* SAS Visual Analytics: [Documentation](https://go.documentation.sas.com/?cdcId=vacdc&cdcVersion=8.4&docsetId=vaov&docsetTarget=titlepage.htm&locale=en)
+* [General information](https://www.sas.com/en_us/software/analytics-iot.html) about SAS Analytics for IoT
+* Technical details about [how SAS Event Stream Processing implements SST](https://go.documentation.sas.com/?cdcId=espcdc&cdcVersion=6.1&docsetId=espan&docsetTarget=p0dv9t241gp1ptn13vo75aol2d1b.htm&locale=en)
+* Reference information about the [MWPCA procedure](https://go.documentation.sas.com/?cdcId=pgmsascdc&cdcVersion=9.4_3.4&docsetId=casml&docsetTarget=casml_mwpca_toc.htm&locale=en) of SAS Visual Data Mining and Machine Learning
+* Reference information about the [Subspace Tracking Package in TSMODEL procedure](https://go.documentation.sas.com/?cdcId=pgmsascdc&cdcVersion=9.4_3.4&docsetId=castsp&docsetTarget=castsp_sst_toc.htm&locale=en) of SAS Visual Forecasting
+* An [overview](https://go.documentation.sas.com/?cdcId=vacdc&cdcVersion=8.4&docsetId=vaov&docsetTarget=titlepage.htm&locale=en) of SAS Visual Analytics
+* SAS Support Communities [website](https://communities.sas.com/)
+* You can find additional IoT use cases on the [SAS for Developers website](https://developer.sas.com/guides/iot.html)
