@@ -1,6 +1,6 @@
 # Detecting Degradation in Wind Turbines
 
-<img src="https://img.shields.io/badge/Category-Condition--Based%20Maintenance-blue"> <img src="https://img.shields.io/badge/Sub--Category-Anomaly%20Detection-yellowgreen"> <img src="https://img.shields.io/badge/Difficulty-Intermediate-yellow"> <img src="https://img.shields.io/badge/Analytical%20Method-Subspace%20Tracking%20(SST)-brightgreen"> <img src="https://img.shields.io/badge/Updated-Dec%202019-orange">
+<img src="https://img.shields.io/badge/Category-Condition--Based%20Maintenance-blue"> <img src="https://img.shields.io/badge/Sub--Category-Anomaly%20Detection-yellowgreen"> <img src="https://img.shields.io/badge/Difficulty-Intermediate-yellow"> <img src="https://img.shields.io/badge/Analytical%20Method-Subspace%20Tracking%20(SST)-green"> <img src="https://img.shields.io/badge/Updated-Dec%202019-orange">
 
 ## Overview
 
